@@ -257,11 +257,7 @@ public class MyGifView extends GifView {
             return typedValueObject.resourceId;  
         } catch (Exception e) {  
             e.printStackTrace();  
-        } finally {  
-            if (typedArray != null) {  
-                typedArray.recycle();  
-            }  
-        }  
+        } 
         return 0;  
     } 
     
@@ -282,58 +278,6 @@ public class MyGifView extends GifView {
         }
         invalidate();
     }
-    /* (非 Javadoc)
-     * Description:
-     * @see android.widget.ImageView#setImageDrawable(android.graphics.drawable.Drawable)
-     */
-//    public void setImageDrawable(Drawable drawable) {
-//        if (drawable != null) {
-//            mImageWidth = drawable.getIntrinsicWidth();
-//            mImageHeight = drawable.getIntrinsicHeight();
-//            Log.d(TAG, "setImageDrawable --- width = " + mImageWidth + " height = " + mImageHeight);
-//            InputStream iStream = FomatUtils.Drawable2InputStream(drawable);
-//            Log.d(TAG, "input sream = " + iStream);
-//            setMovie(iStream);
-//            if (mMovie == null) {
-//                Log.e(TAG, "setImageDrawable---mMovie is null");
-//                super.setImageDrawable(drawable);
-//            }
-//        } else {
-//            super.setImageDrawable(drawable);
-//        }
-//        invalidate();
-//    };
-    
-    /* (非 Javadoc)
-     * Description:
-     * @see android.widget.ImageView#setImageBitmap(android.graphics.Bitmap)
-     */
-//    @Override
-//    public void setImageBitmap(Bitmap bm) {
-//        Log.d(TAG, "setImageBitmap(Bitmap)");
-//        this.setImageDrawable(new BitmapDrawable(getContext().getResources(), bm));
-//    }
-    
-    /* (非 Javadoc)
-     * Description:
-     * @see android.widget.ImageView#setImageURI(android.net.Uri)
-     */
-//    @Override
-//    public void setImageURI(Uri uri) {
-//        try {
-////            mMovie = Movie.decodeFile("/mnt/sda/sda1/智能UI测试数据/picture/static_gif.gif");
-//            mMovie = Movie.decodeFile(uri.toString());
-////            FileInputStream fileInputStream = new FileInputStream("/mnt/sda/sda1/智能UI测试数据/picture/static_gif.gif");
-////            setMovie(fileInputStream);
-//            if (mMovie == null) {
-//                Log.e(TAG, "setImageURI---mMovie is null");
-//                super.setImageURI(uri);
-//            }
-//        } catch (Exception e) {
-//            super.setImageURI(uri);
-//            e.printStackTrace();
-//        }
-//    }
     
     /* (非 Javadoc)
      * Description:
